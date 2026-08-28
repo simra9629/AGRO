@@ -4,6 +4,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import { VitePWA } from "vite-plugin-pwa";
+import netlify from "@netlify/vite-plugin-tanstack-start";
 
 export default defineConfig({
   server: {
@@ -14,6 +15,8 @@ export default defineConfig({
     tsconfigPaths(),
 
     tanstackStart(),
+
+    netlify(),
 
     react(),
 
